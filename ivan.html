@@ -4,71 +4,136 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
+  <!-- <link rel="stylesheet" href="./style.css"> -->
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
     body{
-      background-image: url("./pics/fondo1.jpg");
-      background-size: cover;
-      backdrop-filter: blur(10px);
+      background: #1f242d;
+      color: #fff;
     }
-    .navbar-left ul li a{
-      background-color: #4CAF50;
-      border: none;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-      color: white;
+    .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
     }
-    .container-personal{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+    .inicio{
+      font-size: 25px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: default;
     }
+    .navbar a{
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 10;
+      margin-left: 35px;
+      transition: .3s;
+    }
+    .navbar a:hover,
+    .navbar a.active{
+      color: #0ef;
+    }
+    .home{
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 70px 10% 0;
 
-    .content-personal{
-        display: grid;
-        width: 300px;
-        justify-items: center;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 5px 5px 8px 3px var(--very-light-pink);
-        background-color: var(--hospital-green);
+    }
+    .home-content{
+      max-width: 600px;
+    }
+    .home-content h3{
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .home-content h3:nth-of-type(2){
+      margin-bottom: 30px;
+    }
+    .home-content h3 span{
+      color: #0ef;
+    }
+    .home-content h1{
+      font-size: 56px;
+      font-weight: 700;
+      margin: -3px 0;
+    }
+    .home-content p{
+      font-size: 16px;
+    }
+    .home-img img{
+      max-width: 450px;
+    }
+    .redes-sociales a{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #0ef;
+      border-radius: 50%;
+      font-size: 20px;
+      color: #0ef;
+      text-decoration: none;
+      margin: 30px 15px 30px 0;
+      transition: .5s ease;
+    }
+    .redes-sociales a:hover{
+      background: #0ef;
+      color: #1f242d;
+      box-shadow: 0 0 20px #0ef;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="navbar-left">
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="./persida.html">Persida Trujillo Moya</a>
-        </li>
-        <li>
-          <a href="./cristian.html">Cristian Gabriel Castro Arcona</a>
-        </li>
-        <li>
-          <a href="./ivan.html">Ivan Cristhian Paucara Laura</a>
-        </li>
-        <li>
-          <a href="./franz.html">Franz Reynaldo Huanaco Alave</a>
-        </li>
-        <li>
-          <a href="./armando.html">Armando Chui Sea</a>
-        </li>
-      </ul>
+  <header class="header">
+    <a href="/" class="inicio">Home</a>
+    <nav class="navbar">
+      <a href="./persida.html" >Persida</a>
+      <a href="./cristian.html">Cristian</a>
+      <a href="./ivan.html" class="active">Ivan</a>
+      <a href="./franz.html">Franz</a>
+      <a href="./armando.html">Armando</a>
+    </nav>
+  </header>
+  <section class="home">
+    <div class="home-content">
+      <h3>Hola, mi nombre es:</h3>
+      <h1>IVAN PAUCARA</h1>
+      <h3>Actualmente soy <span>Analista de Sistemas</span></h3>
+      <p>Tengo 31 años, con una hermosa familia la cual esta conformada por mi esposa, mi hijo y un pequeño que se encuentra en camino
+         El deporte que mas practico es el futsal, pero tambien practico el wally</p>
+      <div class="redes-sociales">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter' ></i></a>
+        <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+        <a href="#"><i class='bx bxl-tiktok' ></i></a>
+      </div>
     </div>
-  </nav>
-  <div class="container-personal">
-    <div class="content-personal">
-      <img src="./pics/ivan.jpeg" alt="imagen" width="200" height="250">
-      <p>Ivan Cristhian Paucara Laura</p>
-      <p>Tengo 31 años, con una hermosa familia la cual esta conformada por mi esposa, mi hijo y un pequeño que se encuentra en camino</p>
-      <br>
-      <p>El deporte que mas practico es el futsal, pero tambien practico el wally</p>
+    <div class="home-img">
+      <img src="./pics/ivan.jpg" alt="imagen" width="200" height="250">
     </div>
-  </div>
+  </section>
+ 
 </body>
 </html>
